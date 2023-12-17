@@ -1,0 +1,190 @@
+.navbar {
+  font-family: "Kumbh Sans", sans-serif;
+  margin: 1.75rem 10.31rem 0 10.31rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.81rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.53rem;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+  color: #69707d;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.625rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav li.active {
+  position: relative;
+}
+
+.nav li.active::after {
+  content: "";
+  position: absolute;
+  bottom: -3.56rem; /* Adjust this value to control the space between text and underline */
+  left: 0;
+  width: 100%;
+  height: 0.25rem;
+  background-color: #ff7e1b;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 2.83rem;
+}
+
+.profile svg {
+  cursor: pointer;
+}
+
+.profile img {
+  width: 3.125rem;
+  height: 3.125rem;
+  cursor: pointer;
+}
+
+.profile img:hover {
+  border-radius: 3.125rem;
+  border: 2px solid #ff7e1b;
+  box-sizing: border-box;
+}
+
+.border {
+  border-bottom: 0.0625rem solid #e4e9f2;
+}
+
+.nav-cart-count {
+  width: 1.1875rem;
+  height: 0.8125rem;
+  border-radius: 0.40625rem;
+  background: #ff7e1b;
+  color: #fff;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: -1.3rem;
+  margin-left: -3.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  visibility: hidden;
+}
+
+/* Mobile style */
+
+nav a {
+  color: #1d2026;
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.625rem;
+}
+
+.nav-btn {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  visibility: hidden;
+  outline: none;
+  opacity: 0;
+  display: flex;
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    margin: 1.5rem;
+  }
+
+  .nav {
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    margin: 0;
+  }
+
+  .border {
+    display: none;
+  }
+
+  ul {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 15.625rem;
+    height: 56.25rem;
+    top: 0;
+    left: 0;
+    gap: 1rem;
+    background: #fff;
+    transition: 1s;
+    transform: translateX(-100vh);
+    padding: 1.56rem;
+  }
+
+  .responsive_nav {
+    transform: none;
+  }
+
+  .visible {
+    visibility: visible;
+  }
+
+  .nav-btn {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-close-btn {
+    align-items: flex-start;
+    margin-bottom: 3.36rem;
+  }
+
+  .profile {
+    gap: 1rem;
+  }
+
+  .profile img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .nav-cart-count {
+    margin-top: -1.3rem;
+    margin-left: -1.7rem;
+  }
+}
